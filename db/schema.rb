@@ -20,9 +20,10 @@ ActiveRecord::Schema.define(version: 2019_05_23_185015) do
     t.string "title"
     t.string "content"
     t.string "keyword"
-    t.string "featured"
+    t.boolean "featured", default: false
     t.string "category"
     t.string "sub_category"
+    t.string "article_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -38,7 +39,9 @@ ActiveRecord::Schema.define(version: 2019_05_23_185015) do
     t.string "first_name"
     t.string "last_name"
     t.string "username"
+    t.string "password_digest"
     t.string "location"
+    t.string "img_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

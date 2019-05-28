@@ -5,9 +5,10 @@ class CreateArticles < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :content
       t.string :keyword
-      t.string :featured
+      t.boolean :featured, default: false
       t.string :category
       t.string :sub_category
+      t.string :article_url
 
       t.timestamps
     end
