@@ -9,7 +9,7 @@ class Api::V1::UsersController < ApplicationController
 
   def create
     usr = User.create(user_params)
-
+    #  byebug
   end
 
   private
