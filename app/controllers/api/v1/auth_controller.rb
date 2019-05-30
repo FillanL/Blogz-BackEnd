@@ -13,7 +13,6 @@ class Api::V1::AuthController < ApplicationController
 
     def show
         token = request.headers["Authenticate"]
-
         user = User.find_by(id: token)
 
         if user 

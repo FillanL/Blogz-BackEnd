@@ -11,6 +11,10 @@ class Api::V1::UsersController < ApplicationController
     usr = User.create(user_params)
     #  byebug
   end
+  
+  def delete
+    
+  end
 
   private
   def user_params

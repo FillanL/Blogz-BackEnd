@@ -14,6 +14,9 @@ class Api::V1::ArticlesController < ApplicationController
     # byebug
   end
 
+  def delete
+  end
+
   private
   def article_params
     params.require(:article).permit(:title,:keyword,:category,:content,:user_id)
