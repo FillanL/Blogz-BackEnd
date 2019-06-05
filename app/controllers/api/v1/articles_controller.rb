@@ -8,10 +8,9 @@ class Api::V1::ArticlesController < ApplicationController
   end
 
   def create
-  article= Article.create(article_params)
-  article.user_id = 1
-  article.save
-    # byebug
+  article= Article.find_or_create_by(article_params)
+  
+    render json: ArticleSerializer.new(article)
   end
 
   def delete

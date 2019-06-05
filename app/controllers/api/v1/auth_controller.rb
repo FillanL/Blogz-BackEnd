@@ -1,5 +1,10 @@
 class Api::V1::AuthController < ApplicationController
 
+    def index
+        user = User.find_by(id: params["username"])
+    end
+
+
     def create
         # byebug
         user = User.find_by(username:username_params["username"])

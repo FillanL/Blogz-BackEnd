@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :saved_articles
       resources :articles
       resources :users
+      get 'auth/:id', to: 'auth#index'
       post 'auth/', to: 'auth#create'
       get 'auth/', to: 'auth#show'
 
