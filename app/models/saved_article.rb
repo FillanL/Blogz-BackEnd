@@ -1,4 +1,8 @@
 class SavedArticle < ApplicationRecord
     belongs_to :user
-    # has_many :articles through: :users
+    belongs_to :article
+    # belongs_to :article
+    # has_many :articles
+
+  
 end
